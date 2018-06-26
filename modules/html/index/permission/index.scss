@@ -1,0 +1,76 @@
+$white: #fff;
+.mageUseradd {
+  .info_body {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .dropdown-menu {
+    max-height: 205px;
+    overflow: auto;
+  }
+  .multiselect-container>li>a {
+    padding-right: 40px;
+  }
+}
+// 添加修改角色框样式
+// 角色管理
+.mageRole {
+  .dialog-box .dialog-box-content {
+    margin-bottom: 30px;
+  }
+  .roleInput {
+    width: 285px;
+    padding-left: 5px;
+  }
+  textarea.roleInput {
+    height: 60px;
+    // max-height: 200px;
+    padding: 5px;
+  }
+  .rolebox {
+    margin-bottom: 20px;
+    label {
+      display: inline-block;
+      min-width: 70px;
+      margin-right: 12px;
+      text-align: justify;
+      vertical-align: top;
+    }
+  }
+}
+// 树结构样式
+#treeDemo, #treeDemos {
+  width: 68%;
+  padding-left: 19px;
+  margin-left: 20%;
+}
+#treeDemo {
+  max-height: 590px;
+}
+.mageRoleupdate, .magePermisadd {
+  textarea.form-control {
+    height: 60px;
+    padding: 5px;
+  }
+  .add_inner {
+    position: relative;
+  }
+  .regist_btn {
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+}
+
+// 添加权限
+.magePermisadd {
+  .changeMenu.active {
+    display: none;
+  }
+  .fatherSet.active {
+    display: none;
+  }
+  .form-control.form-short {
+    width: 20%;
+  }
+}

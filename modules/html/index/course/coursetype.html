@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="static/html/index/course/course.css">
+<link rel="stylesheet" href="bootstrap-multiselect/dist/css/bootstrap-multiselect.css">
+<div class="content-wrapper">
+    <link rel="import" href="modules/html/home/home.html?__inline">
+    <form class="form-inline course_serch">
+        <div class="form-group">
+            <label>选择</label>
+            <select class="form-control pub_status">
+                <option>全部</option>
+                <option>test1</option>
+                <option>test2</option>
+                <option>test3</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>选择</label>
+            <select class="form-control pub_status">
+                <option>全部</option>
+                <option>test1</option>
+                <option>test2</option>
+                <option>test3</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn_query">查询</button>
+    </form>
+    <div class="con_inner">
+        <div class="btn_box">
+            <a href="#" class="btn btn_add btn_con">
+                <i class="btn_icon add_icon clearfix"></i>
+                <span>功能按钮1</span>
+            </a>
+            <a href="#" class="btn btn_publish btn_con">
+                <i class="btn_icon publish_icon clearfix"></i>
+                <span>功能按钮2</span>
+            </a>
+            <a href="#" class="btn btn_update btn_con">
+                <i class="btn_icon unline_icon clearfix"></i>
+                <span>功能按钮3</span>
+            </a>
+            <a href="#" class="btn btn_delete btn_con" data-toggle="modal" data-target="#delete_Modal">
+                <i class="btn_icon delete_icon clearfix"></i>
+                <span>功能按钮4</span>
+            </a>
+        </div>
+        <div class="tablebox">
+            <table class="table table-hover" data-toggle="table" data-url="data.json" data-pagination="true">
+                <thead class="tbl-title">
+                    <tr>
+                    <th class="numeric">
+                        <input type="checkbox" id="check-all" value="option1" aria-label="...">
+                    </th>
+                    <th class="numeric">列表1</th>
+                    <th class="numeric">列表2</th>
+                    <th class="numeric">列表3</th>
+                    <th class="numeric">列表4</th>
+                    <th class="numeric">列表5</th>
+                    <th class="numeric">列表6</th>
+                    <th class="numeric">列表7</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+                        </td></label>
+                        <td class="numeric">1</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+
+                    </tr>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+                        </td></label>
+                        <td class="numeric">2</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+
+                    </tr>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+                        </td></label>
+                        <td class="numeric">3</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+                        <td class="numeric">内容</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <link rel="import" href="modules/html/pages/page.html?__inline">
+    </div>
+</div>
+
+<script>
+    var main = require('/modules/app/main');
+    main.check_all('.table');
+    /*$('.btn_publish ').click(function(){
+        main.dialogBox.init('#btn-dialogBox',{
+            title: '提示',
+            hasClose: true,
+            hasMask:true,
+            autoHide:true,
+            time:2000,
+            content: '<em class="title_suc" style="background-image: url(__uri(static/images/hasdone_shadow.png))"></em><span>文件发布成功！</span>',
+            hasBtn: true,
+            confirmValue: '我知道了',
+        });
+    });*/
+/*    require('bootstrap-multiselect/dist/js/bootstrap-multiselect');
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect({
+            nonSelectedText: '多选',
+            nSelectedText :'项已选',
+            allSelectedText:'已全选',
+            includeSelectAllOption :true,
+            selectAllText:'全选'
+        });
+    });*/
+</script>

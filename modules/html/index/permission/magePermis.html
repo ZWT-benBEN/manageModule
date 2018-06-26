@@ -1,0 +1,112 @@
+<!-- <link rel="stylesheet" href="index.scss"> -->
+<div class="content-wrapper">
+    <link rel="import" href="modules/html/home/home.html?__inline">
+    <form class="form-inline course_serch">
+        <div class="form-group">
+            <label for="mod_sc">权限名称</label>
+            <input type="text" class="form-control" id="mod_sc" maxlength="10" placeholder="请输入权限名称">
+        </div>
+        <button type="submit" class="btn btn_query">查询</button>
+    </form>
+    <div class="con_inner">
+        <div class="btn_box">
+            <a href="magePermisadd.html" class="btn btn_add btn_con">
+                <i class="btn_icon add_icon clearfix"></i>
+                <span>添加</span>
+            </a>
+            <a href="magePermisupdate.html" class="btn btn_update btn_con">
+                <i class="btn_icon update_icon clearfix"></i>
+                <span>修改</span>
+            </a>
+            <a href="#" class="btn btn_delete btn_con" data-toggle="modal" data-target="#delete_Modal">
+                <i class="btn_icon delete_icon clearfix"></i>
+                <span>删除</span>
+            </a>
+        </div>
+        <div class="tablebox">
+            <table class="table table-hover" data-toggle="table" data-url="data.json" data-pagination="true">
+                <thead class="tbl-title">
+                    <tr>
+                        <th class="numeric">
+                            <input type="checkbox" id="check-all" value="option1" aria-label="...">
+                        </th>
+                        <th class="numeric">ID</th>
+                        <th class="numeric">权限名称</th>
+                        <th class="numeric">权限路径</th>
+                        <th class="numeric">是否菜单</th>
+                        <th class="numeric">是否系统功能</th>
+                        <th class="numeric">权重排序</th>
+                        <th class="numeric">父权限ID</th>
+                        <th class="numeric">父权限名称</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <label><td>
+
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>1</td>
+                        <td class="numeric">登录</td>
+                        <td class="numeric">/login</td>
+                        <td class="numeric">不是</td>
+                        <td class="numeric">是</td>
+                        <td class="numeric">0</td>
+                        <td class="numeric">0</td>
+                        <td class="numeric">系统基本功能</td>
+                    </tr>
+                    <tr>
+                        <label><td>
+
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>2</td>
+                        <td class="numeric">主页</td>
+                        <td class="numeric">/main</td>
+                        <td class="numeric">不是</td>
+                        <td class="numeric">是</td>
+                        <td class="numeric">0</td>
+                        <td class="numeric">0</td>
+                        <td class="numeric">系统基本功能</td>
+                    </tr>
+                    <tr>
+                        <label><td>
+
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>3</td>
+                        <td class="numeric">试卷管理</td>
+                        <td class="numeric">/subject/list</td>
+                        <td class="numeric">是</td>
+                        <td class="numeric">不是</td>
+                        <td class="numeric">7</td>
+                        <td class="numeric">426</td>
+                        <td class="numeric">行测题库</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <link rel="import" href="modules/html/pages/page.html?__inline">
+    </div>
+</div>
+<script>
+    var $ , jQuery;
+    $ = jQuery = require('jquery');
+    require('bootstrap/js/modal')
+    var main = require('/modules/app/main');
+    main.check_all('.table');
+    $('.btn_delete ').click(function(){
+        main.dialogBox.init('#btn-dialogBox',{
+                title: '提示',
+                hasClose: true,
+                hasMask:true,
+                content: '<em class="title_suc" style="background-image: url(__uri(static/images/delete_shadow.png)); margin-left: 0;"></em><span>确定删除此权限吗？</span>',
+                hasBtn: true,
+                confirmValue: '确定',
+                cancelValue: '取消',
+        });
+    });
+</script>
