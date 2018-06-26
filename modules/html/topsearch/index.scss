@@ -1,0 +1,89 @@
+@import "/modules/css/common";
+.paperSearch{
+  position: relative;
+  width: 100%;
+  height: 118px;
+  background-image: url(/modules/images/papersearch.png);
+  background-size: cover;
+}
+.schbox{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 590px;
+  height: 43px;
+  background: #fff;
+  font-size: 16px;
+  .selectstyle{
+    position: relative;
+    float: left;
+    width: 14%;
+    height: 43px;
+    &:after{
+      position: absolute;
+      right: 0;
+      top:18px;
+      width:0;
+      height:0;
+      border-width:9px 6px 0;
+      border-style:solid;
+      border-color:#666 transparent transparent ;
+      content: "";
+    }
+  }
+  select{
+    position: absolute;
+    z-index:2;
+    display: inline-block;
+    width: 100%;
+    padding: 0 25px 0 20px;
+    height: 100%;
+    line-height: 43px;
+    border: none;
+    outline: none;
+    background: transparent;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    &:focus{
+      outline: none;
+      border: none;
+    }
+  }
+  .inputstyle{
+    float: left;
+    width: 70%;
+    height: 100%;
+    line-height: 43px;
+    box-sizing: border-box;
+    input{
+      width: 100%;
+      display: inline-block;
+      border:none;
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      height:60%;
+      border-left: 1px solid #ccc;
+      &:focus{
+        outline:none;
+        border: none;
+        border-left: 1px solid #ccc;
+      }
+    }
+  }
+  .btn_search{
+    float: right;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    line-height: 43px;
+    background-color: #ff7800;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,152 @@
+<link rel="stylesheet" href="index.scss">
+<div class="content-wrapper">
+    <link rel="import" href="modules/html/home/home.html?__inline">
+    <div class="con_inner">
+        <div class="btn_box">
+            <a href="#" class="btn btn_add btn_con">
+                <i class="btn_icon add_icon clearfix"></i>
+                <span>添加</span>
+            </a>
+             <a href="#" class="btn btn_update btn_con">
+                <i class="btn_icon update_icon clearfix"></i>
+                <span>修改</span>
+            </a>
+            <a href="#" class="btn btn_delete btn_con" data-toggle="modal" data-target="#delete_Modal">
+                <i class="btn_icon delete_icon clearfix"></i>
+                <span>删除</span>
+            </a>
+            <a href="mageRoleupdate.html" class="btn btn_updateRole btn_con">
+                <i class="btn_icon update_icon clearfix"></i>
+                <span>修改角色权限</span>
+            </a>
+        </div>
+        <div class="tablebox">
+            <table class="table table-hover" data-toggle="table" data-url="data.json" data-pagination="true">
+                <thead class="tbl-title">
+                    <tr>
+                        <th class="numeric">
+                            <input type="checkbox" id="check-all" value="option1" aria-label="...">
+                        </th>
+                        <th class="numeric">ID</th>
+                        <th class="numeric">角色名称</th>
+                        <th class="numeric">角色描述</th>
+                        <th class="numeric">状态</th>
+                        <th class="numeric">当前绑定人数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>1</td>
+                        <td class="numeric">ROLE_SUPER_ADMIN</td>
+                        <td class="numeric">超级管理员</td>
+                        <td class="numeric">正常</td>
+                        <td class="numeric">5</td>
+                    </tr>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>2</td>
+                        <td class="numeric">ROLE_QUESTION_ADMIN</td>
+                        <td class="numeric">题库管理员</td>
+                        <td class="numeric">正常</td>
+                        <td class="numeric">2</td>
+                    </tr>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>3</td>
+                        <td class="numeric">ROLE_QUESTION_ADMIN</td>
+                        <td class="numeric">资讯管理员</td>
+                        <td class="numeric">正常</td>
+                        <td class="numeric">0</td>
+                    </tr>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>4</td>
+                        <td class="numeric">ROLE_QUESTION_ADMIN</td>
+                        <td class="numeric">考点讲解管理员</td>
+                        <td class="numeric">正常</td>
+                        <td class="numeric">0</td>
+                    </tr>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>5</td>
+                        <td class="numeric">ROLE_QUESTION_ADMIN</td>
+                        <td class="numeric">直播课管理员</td>
+                        <td class="numeric">正常</td>
+                        <td class="numeric">1</td>
+                    </tr>
+                    <tr>
+                        <label><td>
+                            <input type="checkbox"  value="option1" aria-label="...">
+
+                        </td></label>
+                        <td>6</td>
+                        <td class="numeric">ROLE_QUESTION_ADMIN</td>
+                        <td class="numeric">运营管理员</td>
+                        <td class="numeric">正常</td>
+                        <td class="numeric">4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <link rel="import" href="modules/html/pages/page.html?__inline">
+    </div>
+</div>
+<script>
+    var $ , jQuery;
+    $ = jQuery = require('jquery');
+    require('bootstrap/js/modal')
+    var main = require('/modules/app/main');
+    main.check_all('.table');
+    // 删除
+    $('.btn_delete ').click(function(){
+        main.dialogBox.init('#btn-dialogBox',{
+                title: '提示',
+                hasClose: true,
+                hasMask:true,
+                content: '<em class="title_suc" style="background-image: url(__uri(static/images/delete_shadow.png)); margin-left: 0;"></em><span>确定删除此权限吗？</span>',
+                hasBtn: true,
+                confirmValue: '确定',
+                cancelValue: '取消',
+        });
+    });
+    // 添加
+    $('.btn_add').click(function(){
+        main.dialogBox.init('#btn-dialogBox',{
+                title: '添加角色',
+                hasClose: true,
+                hasMask:true,
+                content: '<div class="roleAdd"><p class="rolebox"><label>角色名称：</label><input class="roleInput"></p></div><p class="rolebox"><label>角色描述：</label><textarea class="roleInput" ></textarea></p></div>',
+                hasBtn: true,
+                confirmValue: '确定',
+                cancelValue: '取消',
+        });
+    });
+    // 修改
+    $('.btn_update').click(function(){
+        main.dialogBox.init('#btn-dialogBox',{
+                title: '修改角色',
+                hasClose: true,
+                hasMask:true,
+                content: '<div class="roleAdd"><p class="rolebox"><label>角色ID：</label><input class="roleInput" disabled value="2"></p><p class="rolebox"><label>角色名称：</label><input class="roleInput"></p></div><p class="rolebox"><label>角色描述：</label><textarea class="roleInput"></textarea></p></div>',
+                hasBtn: true,
+                confirmValue: '确定',
+                cancelValue: '取消',
+        });
+    });
+</script>

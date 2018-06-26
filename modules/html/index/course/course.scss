@@ -1,0 +1,346 @@
+@import "/modules/css/common";
+.btn_save{
+  width: 140px;
+  height: 43px;
+  line-height: 43px;
+  border-radius: 0;
+  font-size: $font-size-large;
+}
+.info_body{
+  .form-inline{
+    margin-bottom: 45px;
+  }
+}
+.detail-style{
+  .dropdown-menu{
+    min-width: 130px;
+    text-align: center;
+  }
+  .form-inline .multiselect-container label.checkbox, .form-inline .multiselect-container label.radio{
+    padding: 3px 35px;
+  }
+  .ke-container{
+    margin-left: 20%;
+  }
+  p.import_star{
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  .add_info{
+    padding: 0 20px;
+  }
+  .add_inner{
+    border: 1px solid $inner_border;
+    border-top: 0;
+  }
+  .info_body input.form-control.form-sort{
+    width: 20% !important;
+  }
+  label{
+    position: absolute;
+    top:0;
+    width: 20%;
+    text-align: right;
+    margin-right: 15px;
+  }
+  select.form-control{
+    position: relative;
+    left: 24px;
+    margin-left: 20%;
+    width: 20%;
+  }
+  p{
+    position: relative;
+    margin-bottom: 20px;
+  }
+  input.form-control,textarea.form-control{
+    position: relative;
+    left: 24px;
+    margin-left: 20%;
+    width: 60%;
+  }
+  .update_logo label.change_btn{
+    margin-left: -200px;
+  }
+  .change_btn{
+    width: 75px;
+    min-width: 75px;
+    input{
+      width: 75px;
+      position: relative;
+      top:-25px;
+      left: -10px;
+    }
+  }
+  a.change_btn{
+    position: relative;
+    top:14px;
+  }
+  #update_img{
+    position: relative;
+    top:-25px;
+    left: -10px;
+    width: 75px;
+  }
+  .form-inline{
+    margin-bottom: 20px;
+  }
+  .regist_btn{
+    margin-bottom: 30px;
+  }
+  .pay_warn{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .btn-group{
+    position: relative;
+    left: 24px;
+    margin-left: 20%;
+    label{
+        text-align: left;
+      }
+  }
+  .add_ques{
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .timeinput_box{
+    display: inline-block;
+    position: relative;
+    left: 24px;
+    margin-left: 20%;
+    margin-right: 40px;
+    width: 20%;
+    em{
+      position: absolute;
+      z-index:22;
+      top:7px;
+      left: 8px;
+    }
+    input.form-control.data_time{
+      padding-left: 30px;
+      margin-left: 0;
+      width: 100%;
+      left: 0;
+    }
+  }
+  .timeinput_box.timeinput_box2{
+    margin-left: 0;
+  }
+}
+.course_set{
+  .imgbox{
+    padding: 65px 0;
+    text-align: center;
+    a{
+      display: inline-block;
+    }
+    img{
+      width: 304px;
+      height: 176px;
+    }
+    img.course_set{
+      margin-right: 95px;
+    }
+  }
+}
+.set_fast{
+  .form-inline{
+    margin-bottom: 20px;
+  }
+  .form-group{
+    width: 28%;
+    input{
+      width: 65%;
+    }
+    label{
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+.set_add{
+  padding: 25px 50px;
+  .set_add_info{
+    border: 1px solid $inner_border;
+    border-top: 0;
+  }
+   label{
+    margin: 10px;
+     min-width: 94px;
+  }
+  .info_body{
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    .form-control{
+      width: 80%;
+      vertical-align: text-top;
+    }
+    .form-control.form_sort{
+      width: 50%;
+    }
+    .form-control.form_ssort{
+      width: 30%;
+    }
+    .timeinput_box{
+      margin-left: 0;
+      left: 5px;
+      width: 30%;
+      margin-right: 8px;
+    }
+    .btn_save{
+      width: 140px;
+      height: 43px;
+      line-height: 43px;
+      border-radius: 0;
+      font-size: $font-size-large;
+    }
+    input[type=file]{
+      position: relative;
+      top:-28px;
+      left: 118px;
+      outline: none;
+    }
+  }
+  .upimg_btnbox{
+    display: inline-block;
+    vertical-align: text-top;
+      .change_btn {
+        margin-left: inherit;
+        position: relative;
+        top:45px;
+        margin-left: -165px;
+      }
+      input[type=file]{
+        width: 75px;
+        position: relative;
+        top:-25px;
+        left: -10px;
+      }
+    }
+}
+.course_upload{
+  h3{
+    margin-bottom: 35px;
+    font-family: '宋体';
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+.coursefree_add{
+  .info_title{
+    height: 36px;
+    line-height: 36px;
+    .dropdownbox{
+      height: 100%;
+    }
+  }
+  .reuser_info{
+    .info_body{
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      width: 90%;
+      max-height:470px ;
+      margin-bottom: 30px;
+      overflow-y: hidden;
+      .form-control{
+        margin-right: 15px;
+      }
+      label{
+        min-width: 120px;
+      }
+    }
+  }
+  .reuser_info.active{
+    margin-bottom: 30px;
+    .info_body{
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .dropdown{
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  .reuser_follow{
+    .info_body{
+      width: 100%;
+      padding-top: 0;
+      input.form-control.page_show{
+        width: 30px;
+        vertical-align: middle;
+      }
+      label{
+        margin: 0;
+      }
+    }
+    .info_title{
+      .all_set{
+        display: inline-block;
+        min-width: 97px;
+        height: 26px;
+        padding: 0 10px;
+        margin-top: 4px;
+        margin-right: 13px;
+        text-align: center;
+        line-height: 26px;
+        border-radius: 4px;
+      }
+    }
+    table td a{
+      text-decoration: underline;
+    }
+  }
+  .searchbox{
+    position: relative;
+  }
+  .searchlist{
+    display: inline-block;
+    position: absolute;
+    z-index: 9999999;
+    margin-left: 149px;
+    margin-top: -12px;
+    min-width: 30%;
+    height: auto;
+    max-height: 360px;
+    overflow-y: hidden;
+    background: #fff;
+    border: 1px solid $inner_border;
+    border-top: none;
+    box-shadow: 1px 0 0 $boxshadow,-1px 0 0 $boxshadow,0 1px 0 $boxshadow,0 -1px 0 $boxshadow,0 3px 13px rgba(0,0,0,0.08);
+    li{
+      height: 30px;
+      line-height: 30px;
+      padding: 0 15px;
+      border-bottom: 1px solid $inner_border;
+      &:hover{
+        color: #fff;
+      }
+    }
+    li:last-child{
+      border-bottom: none;
+    }
+  }
+}
+.group_con{
+  .form-group{
+    width: 70%;
+    input{
+      width: 60%;
+    }
+    label{
+      font-weight: $font-weight-bold;
+    }
+  }
+  .form-inline{
+    margin-bottom: 20px;
+  }
+}

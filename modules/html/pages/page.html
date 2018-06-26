@@ -1,0 +1,45 @@
+<div class="pages">
+    <span class="pageall_num">共 <span class="page_page">12</span>页<span class="page_num">120</span>条数据</span>
+    <span class="form-inline">
+        <label for="page_show">每页显示</label>
+        <input type="text" class="form-control page_show" id="page_show" value="5">条
+    </span>
+    <span aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page_icon ">
+                <a href="javascript:;" aria-label="Previous" class="btn">
+                    <span aria-hidden="true" class="icon-pageFirst"></span>
+                </a>
+            </li>
+             <li class="page_icon icon_mini" >
+                <a href="javascript:;" aria-label="Previous" class="btn">
+                    <span aria-hidden="true" class="icon-pagePrev"></span>
+                </a>
+            </li>
+            <li class="page_b"><a href="javascript:;" class="active">1</a></li>
+            <li class="page_b"><a href="javascript:;">2</a></li>
+            <li class="page_b"><a href="javascript:;">3</a></li>
+            <li class="page_b"><a href="javascript:;">4</a></li>
+            <li class="page_b"><a href="javascript:;">5</a></li>
+            <li class="page_icon icon_mini">
+                <a href="javascript:;" aria-label="Previous" class="btn">
+                    <span aria-hidden="true" class="icon-pageNext"></span>
+                </a>
+            </li>
+            <li class="page_icon">
+                <a href="javascript:;" aria-label="Next" class="btn">
+                    <span aria-hidden="true" class="icon-pageLast "></span>
+                </a>
+            </li>
+        </ul>
+    </span>
+
+</div>
+<script>
+    var $,jQuery;
+    $ = jQuery = require('jquery');
+    $('.page_b a').on('click',function(){
+        $('.page_b a').removeClass('active');
+        $(this).addClass('active')
+    })
+</script>

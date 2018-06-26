@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="userleftnav.scss">
+<aside class="main-sidebar clearfix">
+    <section class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="">
+                <a href="#" class="side-menu_title">
+                    <em style="display:inline-block;width:18px;height:16px;background-image:url(__uri(static/images/usergl.png))" class="fa fa-link"></em>
+                    <span>用户管理</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="user_info.html" >
+                            <i class="positionicon"></i>
+                            <span>用户资料</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user_safe.html">
+                            <i class="positionicon"></i>
+                            <span>账户安全</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user_myinfo.html">
+                            <i class="positionicon"></i>
+                            <span>我的消息</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#"  class="side-menu_title">
+                    <em style="width:15px;height:15px;background-image:url(__uri(static/images/zhgl.png))" class="fa fa-link"></em>
+                    <span>账号管理</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="account_pay.html">
+                            <i class="positionicon"></i>
+                            <span>充值</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account_pack.html">
+                            <i class="positionicon"></i>
+                            <span>功能管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account_deal.html">
+                            <i class="positionicon"></i>
+                            <span>交易管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#"  class="side-menu_title">
+                    <em style="width:18px;height:19px;background-image:url(__uri(static/images/ddgl.png));" class="fa fa-link"></em>
+                    <span>产品订单</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="product_order.html">
+                            <i class="positionicon"></i>
+                            <span>订单管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+</aside>
+<!--皮肤选择模块-->
+<aside class="control-sidebar control-sidebar-dark clearfix">
+    <p>请选择皮肤</p>
+    <ul>
+        <li class="blue">
+            <em style="width:46px;height:22px;background-image:url(__uri(static/images/skin_blue.png));" class="fa fa-link"></em>
+            <h5>蓝色</h5>
+        </li>
+        <li class="purple">
+            <em style="width:46px;height:22px;background-image:url(__uri(static/images/skin_purple.png));" class="fa fa-link"></em>
+            <h5>紫色</h5>
+        </li>
+        <li class="green">
+            <em style="width:46px;height:22px;background-image:url(__uri(static/images/skin_green.png));" class="fa fa-link"></em>
+            <h5>绿色</h5>
+        </li>
+        <li class="red">
+            <em style="width:46px;height:22px;background-image:url(__uri(static/images/skin_red.png));" class="fa fa-link"></em>
+            <h5>红色</h5>
+        </li>
+        <li class="yellow">
+            <em style="width:46px;height:22px;background-image:url(__uri(static/images/skin_yellow.png));" class="fa fa-link"></em>
+            <h5>黄色</h5>
+        </li>
+    </ul>
+</aside>
+<script>
+    var $,jQuery;
+    $ = jQuery = require('jquery');
+    var my = require('/modules/app/main');
+    $(function(){
+        var treeview = $('.treeview-menu')
+        var listmenu = treeview.parent('li');
+        treeview.on('mouseover',function(){
+            $(this).parent('li').addClass('sactive')
+        })
+        treeview.on('mouseout',function(){
+            $(this).parent('li').removeClass('sactive')
+        })
+        $('.control-sidebar ul li').on('click',function(){
+            $('.control-sidebar').removeClass('open')
+            $('.skin').removeClass('open')
+        })
+        var wraper_h = $('.content-wrapper').height();
+        $('.main-sidebar').height(wraper_h)
+        $('.control-sidebar').height(wraper_h)
+    })
+</script>

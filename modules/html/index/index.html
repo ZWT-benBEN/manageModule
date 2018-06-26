@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="index.scss">
+<div class="content-wrapper">
+    <link rel="import" href="modules/html/home/home.html?__inline">
+    <iframe src="mageUser.html" frameborder="0" class="iframe" id="iframeId"></iframe>
+</div>
+<script>
+    var $ , jQuery;
+    $ = jQuery = require('jquery');
+    require('bootstrap/js/modal')
+    var main = require('/modules/app/main');
+    main.check_all('.table');
+</script>
